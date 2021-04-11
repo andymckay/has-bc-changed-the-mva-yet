@@ -6,7 +6,7 @@ updated = date(1996, 1, 1)
 today = date.today()
 month = today.month - 1
 day = today.day - 1
-text = "::set-output name=date::No. It's been %d years" % (today.year - created.year)
+text = "No. It's been %d years" % (today.year - created.year)
 if month: 
     if month > 1:
         text += ", %s months" % month
@@ -20,5 +20,6 @@ if day:
         text += " and %s day" % day
 
 text += " since the MVA was created and %d years since the last major update. A lot has changed since then." % (today.year - updated.year)
-print(text) 
+print("::set-output name=date::", text) 
+print(text)
  
