@@ -7,6 +7,7 @@ jobs:
       date: ${{ steps.date.outputs.date }}
     steps:
     - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
     - id: date
       run: python3 .github/workflows/message.py
   tweet:
