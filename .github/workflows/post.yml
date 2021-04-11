@@ -1,13 +1,21 @@
 name: Send a Tweet
 on: [workflow_dispatch]
 jobs:
+  calculate:
+    runs-on: ubuntu-latest
+    outputs:
+      date: ${{ steps.date.outputs.date }}
+    steps:
+    - uses: actions/checkout@v2
+    - id: date
+      run: python3 .github/workflows/message.py
   tweet:
     runs-on: ubuntu-latest
     steps:
-      - uses: ethomson/send-tweet-action@v1
-        with:
-          status: "No"
-          consumer-key: ${{ secrets.TWITTER_CONSUMER_API_KEY }}
-          consumer-secret: ${{ secrets.TWITTER_CONSUMER_API_SECRET }}
-          access-token: ${{ secrets.TWITTER_ACCESS_TOKEN }}
-          access-token-secret: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+    - uses: ethomson/send-tweet-action@v1
+      with:
+        status: ${{ needs.calculate.outputs.date }}
+        consumer-key: ${{ secrets.TWITTER_CONSUMER_API_KEY }}
+        consumer-secret: ${{ secrets.TWITTER_CONSUMER_API_SECRET }}
+        access-token: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+        access-token-secret: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
