@@ -12,6 +12,7 @@ jobs:
       run: python3 .github/workflows/message.py
   tweet:
     runs-on: ubuntu-latest
+    needs: calculate
     steps:
     - uses: ethomson/send-tweet-action@v1
       with:
