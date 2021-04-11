@@ -6,7 +6,7 @@ updated = date(1996, 1, 1)
 today = date.today()
 month = today.month - 1
 day = today.day - 1
-text = "No. It's been %d years" % (today.year - created.year)
+text = "::set-output name=date::No. It's been %d years" % (today.year - created.year)
 if month: 
     if month > 1:
         text += ", %s months" % month
