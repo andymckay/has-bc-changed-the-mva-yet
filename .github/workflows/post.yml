@@ -1,5 +1,9 @@
 name: Send a Tweet
-on: [workflow_dispatch]
+on: 
+  workflow_dispatch:
+  schedule:
+  - cron: "36 13 * * *"
+    
 jobs:
   calculate:
     runs-on: ubuntu-latest
