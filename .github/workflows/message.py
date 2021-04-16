@@ -37,7 +37,7 @@ if day:
         text += " and %s day" % day
 
 text += " since the MVA was created and %d years since the last major update." % (today.year - updated.year)
-text += " %s" % choice(suffix)
+text += " %s #bcpoli" % choice(suffix)
 print("::set-output name=date::", text) 
 print(text)
  
