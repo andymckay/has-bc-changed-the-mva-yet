@@ -9,11 +9,11 @@ suffix = [
     "E-scooters are now a thing.",
     "One more lane won't fix it.",
     "More cars aren't the answer."
-    "There were 235 fatal crashes in 2019.",
-    "There were 283 fatal crashes in 2018.",
-    "There were 264 fatal crashes in 2017.",
-    "There were 274 fatal crashes in 2016.",
-    "There were 277 fatal crashes in 2015.",    
+    "It was 47.5c in Lytton in 2021.",
+    "Climate change is upon us now.",
+    "cc @bcndp",
+    "There needs to be a safe passing distance for cyclists",
+    "Electric cars won't save us.",
 ]
 
 # I don't know when in 1957 the BC MVA was written.
