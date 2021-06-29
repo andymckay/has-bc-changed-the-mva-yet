@@ -9,7 +9,7 @@ suffix = [
     "E-scooters are now a thing.",
     "One more lane won't fix it.",
     "More cars aren't the answer."
-    "It was 47.5c in Lytton in 2021.",
+    "It was 47.5 celsius in Lytton in 2021.",
     "Climate change is upon us now.",
     "cc @bcndp",
     "There needs to be a safe passing distance for cyclists",
